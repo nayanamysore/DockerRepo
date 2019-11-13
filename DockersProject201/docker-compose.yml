@@ -4,7 +4,7 @@ services:
   image: mysql:5.7
   ports:
    - "3306:3306"
-  container_name: mtestmysql
+  container_name: testmysql
   network_mode: host
   environment:
    MYSQL_ROOT_PASSWORD: Welcome123 
