@@ -4,16 +4,16 @@ services:
   image: mysql:5.7
   ports:
    - "3306:3306"
-  container_name: mysql-standalone
+  container_name: mtestmysql
   network_mode: host
   environment:
    MYSQL_ROOT_PASSWORD: Welcome123 
-   MYSQL_DATABASE: shopingcart
-   MYSQL_USER:  shopingcart
+   MYSQL_DATABASE: UserDB
+   MYSQL_USER:  root
    MYSQL_PASSWORD: Welcome123
 
  spring-docker201app:
-  image: rohini/dockerrepo201:dockerimage
+  image: nayananatraj4/testdocker:dockerimage
   restart: always
   network_mode: host
   container_name: dockerimage
