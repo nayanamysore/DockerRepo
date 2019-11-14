@@ -9,8 +9,6 @@ services:
   environment:
    MYSQL_ROOT_PASSWORD: Welcome123 
    MYSQL_DATABASE: UserDB
-   MYSQL_USER:  root
-   MYSQL_PASSWORD: Welcome123
 
  spring-docker201app:
   image: nayananatraj4/testdocker:dockerimage
@@ -18,6 +16,6 @@ services:
   network_mode: host
   container_name: dockerimage
   depends_on:
-   - mysql-standalone
+   - mysql
   ports:
-   - "8088:8088"
+   - "8080:8080"
